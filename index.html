@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <h1 id="myScreen">Hello my people</h1> -->
+
+    <!-- editable tag -->
+    <!-- <input type="text" id="firstName" placeholder="Firstname" value="idris"> -->
+
+    <!-- <button onclick="sayMyName()">click me </button> -->
+    <!-- <h3 id="myScreen">Display screen</h3> -->
+
+
+    <!-- <h3>Area of a circle calculator</h3>
+    <input type="number" placeholder="Radius" id="radius">
+    <button onclick="calculateCircle()">calculate</button>
+    <h4>Result: <span id="showResult"></span></h4> -->
+    
+
+
+    <div class="ass_body">
+        <div class="ass_items">
+            <h3>AREA OF A TRIANGLE</h3>
+            <input type="number" placeholder="base" id="base_tri">
+            <input type="number" placeholder="height" id="height_tri">
+            <button onclick="calculateTriangle()">calculate</button>
+            <h4>Result: <span id="showTriangleResult"></span></h4>
+        </div>
+        <div class="ass_items">
+            <h3>Area of a circle calculator</h3>
+            <input type="number" placeholder="Pi" id="pi">
+            <input type="number" placeholder="Radius" id="radius">
+            <button onclick="calculateCircle()">calculate</button>
+            <h4>Result: <span id="showResult"></span></h4>
+        </div>
+        <div class="ass_items">
+            <h3>Area of a square calculator</h3>
+            <input type="number" placeholder="Side" id="side">
+            <button onclick="calculateSquare()">calculate</button>
+            <h4>Result: <span id="showSquareResult"></span></h4>
+        </div>
+        <div class="ass_items">
+            <h3>Area of a Quadrilateral calculator</h3>
+            <input type="number" placeholder="Length" id="quad_length">
+            <input type="number" placeholder="Wide" id="quad_width">
+            <button onclick="calculateQuadrilateral()">calculate</button>
+            <h4>Result: <span id="showQuadrilateralResult"></span></h4>
+        </div>
+        
+        <div class="ass_items">
+            <h3>Area of a Rhombus calculator</h3>
+            <input type="number" placeholder="FirstDiagonal" id="first_diagonal">
+            <input type="number" placeholder="SecondDiagonal" id="second_diagonal">
+            <button onclick="calculateRhombus()">calculate</button>
+            <h4>Result: <span id="showRhombusResult"></span></h4>
+        </div>
+        <div class="ass_items">
+            <h3>Area of a Trapezium calculator</h3>
+            <input type="number" placeholder="Base1" id="tra_base">
+            <input type="number" placeholder="Base2" id="tra_base2">
+            <input type="number" placeholder="Height" id="tra_height">
+            <button onclick="calculateTrapezium()">calculate</button>
+            <h4>Result: <span id="showTrapeziumResult"></span></h4>
+        </div>
+        <div class="ass_items">
+            <h3>Area of a Parallelogram calculator</h3>
+            <input type="number" placeholder="Base" id="para_base">
+            <input type="number" placeholder="Height" id="para_height">
+            <button onclick="calculateParallelogram()">calculate</button>
+            <h4>Result: <span id="showParallelogramResult"></span></h4>
+        </div>
+        <div class="ass_items">
+            <h3>Area of a BMI calculator</h3>
+            <input type="number" placeholder="weight" id="bmi_weight">
+            <input type="number" placeholder="Height" id="bmi_height">
+            <button onclick="calculateBmi()">calculate</button>
+            <h4>Result: <span id="showBmiResult"></span></h4>
+        </div>
+    </div>
+    <script>
+        // ASSIGNMENT
+        //VARIOUS TYPE OF EVENT LISTENER
+
+
+        //DOM - document object model
+        // let screen1 = document.getElementById("myScreen")
+        // screen1.style.color = "red"
+        // screen1.textContent = "Hello my people from JavaScript"
+        // screen1.innerHTML = "SOMETHING ELSE"
+        // screen1.innerHTML = `<spam style ="red">hello</spam>`
+        // screen1.innerText = "Hello my people from JavaScript" // This will only display the text, not HTML tags
+        // screen1.insertAdjacentHTML("beforeend", "<p>This is added dynamically</p>") // This will add HTML tags to the end of the text content
+
+        // // Use template literals for more complex strings
+        // let name = "John"
+        // let age = 30
+        // let message = `Hello, my name is ${name}. I am ${age} years old.`
+        // screen1.textContent = message
+        // console.log(screen1);
+
+        // let firstname = document.getElementById("firstName").value
+        // firstname = "fawas"
+        // console.log(firstname)
+
+        // function sayMyName() {
+        //     //  let firstname = document.getElementById("firstName").value
+        //     let firstname = firstName.value
+        //     // let screen1 = document.getElementById("myScreen")
+        //     myScreen.innerHTML = "Your name is " + firstname
+        //     // alert(firstname)
+        // }
+        function calculateTriangle(){
+            let height_try = Number(height_tri.value)
+            let base_try = Number(base_tri.value)
+            // let base = 10
+            // let height = 5
+            let result = 0.5 * base_try * height_try
+            showTriangleResult.innerHTML = result + " square units"
+        }
+        function calculateCircle() {
+            let rad = Number(radius.value)
+            let pi_cir = Number(pi.value)
+            // alert(rad + 1)
+            // const pi = 3.142
+            let result = pi_cir * (rad ** 2)
+            showResult.innerHTML = result + "cm^2"
+        }
+        function calculateSquare(){
+            let side_cir = Number(side.value)
+            let side_num = 4
+            let result = side_cir**2 
+            showSquareResult.innerHTML = result + " square units"
+        }
+        function calculateQuadrilateral(){
+            let width_quadri = Number(quad_width.value)
+            let length_quadri = Number(quad_length.value)
+            // let width = 5
+            let result = length_quadri * width_quadri
+            showQuadrilateralResult.innerHTML = result + " square units"
+        }
+        function calculateRhombus(){
+            let firstDiagonal = Number(first_diagonal.value)
+            let secondDiagonal = Number(second_diagonal.value)
+            let result = 0.5 * firstDiagonal * secondDiagonal
+            showRhombusResult.innerHTML = result + " square units"
+        }
+        function calculateTrapezium(){
+            let trap_height = Number(tra_height.value)
+            let trap_base = Number(tra_base.value)
+            let trap_base2 = Number(tra_base2.value)
+            let result = 0.5 * (trap_base+trap_base2) * trap_height
+            showTrapeziumResult.innerHTML = result + " square units"
+        }
+        function calculateParallelogram(){
+            let parallelogram_base = Number(para_base.value)
+            let parallelogram_height = Number(para_height.value)
+            // let basePara = 10
+            // let heightPara = 6
+            let result = parallelogram_base * parallelogram_height
+            showParallelogramResult.innerHTML = result + " square units" 
+        }
+        function calculateBmi(){
+            let bmiWeight = Number(bmi_weight.value)
+            let bmiHeight = Number(bmi_height.value)
+            // let weight = 70
+            // let height_bmi = 1.75
+            let result = bmiHeight / bmiHeight ** 2
+            showBmiResult.innerHTML = result  + " square units"
+        }
+
+
+    </script>
+</body>
+
+</html>
